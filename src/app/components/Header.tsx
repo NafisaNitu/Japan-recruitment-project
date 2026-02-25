@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import  Logo  from "../images/logo.png";
+import  Logo  from "../images/logo.jpeg";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,10 +14,12 @@ export function Header() {
     { name: "Services", href: "/services" },
     { name: "Industries", href: "/industries" },
     { name: "Target Markets", href: "/target-markets" },
+    { name: "Our Partners", href: "/partnership" },
     { name: "For Employers", href: "/for-employers" },
     { name: "For Candidates", href: "/for-candidates" },
     { name: "Compliance", href: "/compliance" },
     { name: "Group Profile", href: "/group-profile" },
+    { name: "Events", href: "/events" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -34,7 +36,7 @@ export function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={Logo} alt="" />
+            <img src={Logo} className="w-36 h-20" alt="" />
           </Link>
 
           {/* Desktop Navigation */}

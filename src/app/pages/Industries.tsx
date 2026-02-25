@@ -190,7 +190,7 @@ export function Industries() {
                   </div>
                 </div>
                 <div
-                  className={`relative h-80 rounded-lg overflow-hidden shadow-xl ${
+                  className={`relative h-96 overflow-hidden rounded-lg shadow-xl border border-gray-200 ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >

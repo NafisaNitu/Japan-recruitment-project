@@ -26,6 +26,8 @@ export function ForCandidates() {
     education: "",
     experience: "",
     position: "",
+    nid: "",
+    language: "",
     preferredCountry: "",
     skills: "",
   });
@@ -42,6 +44,8 @@ export function ForCandidates() {
       education: "",
       experience: "",
       position: "",
+      nid: "",
+      language: "",
       preferredCountry: "",
       skills: "",
     });
@@ -230,7 +234,7 @@ export function ForCandidates() {
       </section> */}
 
       {/* CV Submission Form */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl mb-4 text-gray-900">
@@ -245,7 +249,7 @@ export function ForCandidates() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="fullName">Full Name *</Label>
+                    <Label htmlFor="fullName" className="mb-2">Full Name *</Label>
                     <Input
                       id="fullName"
                       required
@@ -257,31 +261,31 @@ export function ForCandidates() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email">Email Address *</Label>
+                    <Label htmlFor="email" className="mb-2">Email Address *</Label>
                     <Input
                       id="email"
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="your@email.com"
+                      placeholder="Your email address"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Label htmlFor="phone" className="mb-2">Phone Number *</Label>
                     <Input
                       id="phone"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+880 XXX XXXXXX"
+                      placeholder="Your phone number"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="dateOfBirth">Date of Birth *</Label>
+                    <Label htmlFor="dateOfBirth" className="mb-2">Date of Birth *</Label>
                     <Input
                       id="dateOfBirth"
                       type="date"
@@ -295,7 +299,7 @@ export function ForCandidates() {
                 </div>
 
                 <div>
-                  <Label htmlFor="address">Current Address *</Label>
+                  <Label htmlFor="address" className="mb-2">Current Address *</Label>
                   <Input
                     id="address"
                     required
@@ -307,7 +311,7 @@ export function ForCandidates() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="education">Highest Education *</Label>
+                    <Label htmlFor="education" className="mb-2">Highest Education *</Label>
                     <Input
                       id="education"
                       required
@@ -315,11 +319,11 @@ export function ForCandidates() {
                       onChange={(e) =>
                         setFormData({ ...formData, education: e.target.value })
                       }
-                      placeholder="e.g., Bachelor's Degree"
+                      placeholder="Your Highest Education"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="experience">Years of Experience *</Label>
+                    <Label htmlFor="experience" className="mb-2">Years of Experience *</Label>
                     <Input
                       id="experience"
                       required
@@ -327,14 +331,14 @@ export function ForCandidates() {
                       onChange={(e) =>
                         setFormData({ ...formData, experience: e.target.value })
                       }
-                      placeholder="e.g., 5 years"
+                      placeholder="Your Experience years"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="position">Desired Position *</Label>
+                    <Label htmlFor="position" className="mb-2">Desired Position *</Label>
                     <Input
                       id="position"
                       required
@@ -342,11 +346,11 @@ export function ForCandidates() {
                       onChange={(e) =>
                         setFormData({ ...formData, position: e.target.value })
                       }
-                      placeholder="e.g., Registered Nurse"
+                      placeholder="Your desired position"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="preferredCountry">Preferred Country *</Label>
+                    <Label htmlFor="preferredCountry" className="mb-2">Preferred Country *</Label>
                     <Input
                       id="preferredCountry"
                       required
@@ -354,13 +358,40 @@ export function ForCandidates() {
                       onChange={(e) =>
                         setFormData({ ...formData, preferredCountry: e.target.value })
                       }
-                      placeholder="e.g., Canada, USA, UAE"
+                      placeholder="Your Preferred Country"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="nid" className="mb-2">NID Number *</Label>
+                    <Input
+                      id="nid"
+                      required
+                      value={formData.nid}
+                      onChange={(e) =>
+                        setFormData({ ...formData, nid: e.target.value })
+                      }
+                      placeholder="Your NID Number"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="language" className="mb-2">Language Proficiency *</Label>
+                    <Input
+                      id="language"
+                      required
+                      value={formData.language}
+                      onChange={(e) =>
+                        setFormData({ ...formData, language: e.target.value })
+                      }
+                      placeholder="Your Language Proficiency"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="skills">Skills & Qualifications</Label>
+                  <Label htmlFor="skills" className="mb-2">Skills & Qualifications</Label>
                   <Textarea
                     id="skills"
                     rows={4}
@@ -371,7 +402,7 @@ export function ForCandidates() {
                 </div>
 
                 <div>
-                  <Label htmlFor="cvUpload">Upload CV/Resume *</Label>
+                  <Label htmlFor="cvUpload" className="mb-2">Upload CV/Resume *</Label>
                   <div className="mt-2 flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-6 hover:border-blue-400 transition-colors cursor-pointer">
                     <div className="text-center">
                       <Upload className="mx-auto text-gray-400 mb-2" size={32} />

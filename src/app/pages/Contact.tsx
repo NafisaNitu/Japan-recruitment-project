@@ -97,12 +97,12 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl mb-6 text-gray-900">Send us a Message</h2>
+              <h2 className="text-3xl mb-6 text-gray-900">Feedback</h2>
               <Card>
                 <CardContent className="p-6">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="name" className="mb-2">Full Name *</Label>
                       <Input
                         id="name"
                         required
@@ -115,7 +115,7 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <Label htmlFor="email">Email Address *</Label>
+                      <Label htmlFor="email" className="mb-2">Email Address *</Label>
                       <Input
                         id="email"
                         type="email"
@@ -129,7 +129,7 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Label htmlFor="phone" className="mb-2">Phone Number *</Label>
                       <Input
                         id="phone"
                         required
@@ -142,7 +142,7 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <Label htmlFor="subject">Subject *</Label>
+                      <Label htmlFor="subject" className="mb-2">Subject *</Label>
                       <Input
                         id="subject"
                         required
@@ -155,7 +155,7 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message" className="mb-2">Message *</Label>
                       <Textarea
                         id="message"
                         required

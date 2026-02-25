@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter } from "lucide-react";
+import  Logo  from "../images/logo.jpeg";
 
 export function Footer() {
   return (
@@ -10,12 +11,10 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-[#00a651] text-white px-3 py-1.5 rounded">
-                <span className="font-bold">NAC</span>
-              </div>
-              <span className="font-bold text-white text-sm">
-                Global Employment
-              </span>
+              <Link to="/" className="flex items-center space-x-3">
+            <img src={Logo} className="w-32 h-16" alt="" />
+          </Link>
+              
             </div>
             <p className="text-sm mb-4">
               A trusted manpower recruitment and deployment company under the NAC Group,

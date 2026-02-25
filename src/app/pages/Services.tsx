@@ -34,20 +34,20 @@ export function Services() {
       ],
       image: International,
     },
-    {
-      icon: Heart,
-      title: "Healthcare Recruitment",
-      description:
-        "Specialized healthcare workforce supply with special focus on USA and Canada markets.",
-      features: [
-        "Registered Nurses (RN)",
-        "Licensed Practical Nurses (LPN)",
-        "Caregivers",
-        "Medical Technicians",
-        "Healthcare Assistants",
-      ],
-      image: Healthcare,
-    },
+    // {
+    //   icon: Heart,
+    //   title: "Healthcare Recruitment",
+    //   description:
+    //     "Specialized healthcare workforce supply with special focus on USA and Canada markets.",
+    //   features: [
+    //     "Registered Nurses (RN)",
+    //     "Licensed Practical Nurses (LPN)",
+    //     "Caregivers",
+    //     "Medical Technicians",
+    //     "Healthcare Assistants",
+    //   ],
+    //   image: Healthcare,
+    // },
     {
       icon: Wrench,
       title: "Technical & Engineering Manpower",
@@ -131,7 +131,61 @@ export function Services() {
       {/* Main Services */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <div className="space-y-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl mb-4 text-gray-900">Current Services</h2>
+            </div>
+              <div
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+              >
+                <div className="">
+                    <div className="bg-green-100 p-3 rounded-lg inline-block mb-4">
+                      <Heart className="text-[#00a651]" size={32} />
+                    </div>
+                  <h2 className="text-3xl mb-4 text-gray-900">Healthcare Recruitment</h2>
+                  <p className="text-gray-600 mb-6">Specialized healthcare workforce supply with special focus on USA and Canada markets.</p>
+                  <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-[#00a651] flex-shrink-0"  />
+                        <span className="text-gray-700">Registered Nurses (RN)</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-[#00a651] flex-shrink-0"  />
+                        <span className="text-gray-700">Licensed Practical Nurses (LPN)</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-[#00a651] flex-shrink-0"  />
+                        <span className="text-gray-700">Caregivers</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-[#00a651] flex-shrink-0"  />
+                        <span className="text-gray-700">Medical Technicians</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="text-[#00a651] flex-shrink-0"  />
+                        <span className="text-gray-700">Healthcare Assistants</span>
+                      </div>
+                  </div>
+                </div>
+                <div
+                  className="relative h-96 rounded-lg overflow-hidden shadow-xl border border-gray-200"
+                >
+                  <img
+                    src={Healthcare}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+           
+          </div>
+          {/* Upcoming services */}
+
+          <div className="space-y-16 mt-12">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl mb-4 text-gray-900">Upcoming Services</h2>
+            </div>
             {services.map((service, index) => (
               <div
                 key={service.title}
@@ -155,11 +209,11 @@ export function Services() {
                   </div>
                 </div>
                 <div
-                  className={`relative h-80 rounded-lg overflow-hidden shadow-xl ${
+                  className={`relative h-96 overflow-hidden rounded-lg shadow-xl border border-gray-200 ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
-                  <ImageWithFallback
+                  <ImageWithFallback 
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover"

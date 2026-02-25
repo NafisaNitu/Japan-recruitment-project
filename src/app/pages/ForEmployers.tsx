@@ -226,7 +226,7 @@ export function ForEmployers() {
       </section> */}
 
       {/* Inquiry Form */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl mb-4 text-gray-900">
@@ -241,7 +241,7 @@ export function ForEmployers() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="companyName">Company Name *</Label>
+                    <Label htmlFor="companyName" className="mb-2">Company Name *</Label>
                     <Input
                       id="companyName"
                       required
@@ -253,7 +253,7 @@ export function ForEmployers() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="contactPerson">Contact Person *</Label>
+                    <Label htmlFor="contactPerson" className="mb-2">Contact Person *</Label>
                     <Input
                       id="contactPerson"
                       required
@@ -268,31 +268,31 @@ export function ForEmployers() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="email">Email Address *</Label>
+                    <Label htmlFor="email" className="mb-2">Email Address *</Label>
                     <Input
                       id="email"
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="your@email.com"
+                      placeholder="Your email"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Label htmlFor="phone" className="mb-2">Phone Number *</Label>
                     <Input
                       id="phone"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+1 234 567 8900"
+                      placeholder="Your phone number"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="country">Country *</Label>
+                    <Label htmlFor="country" className="mb-2">Country *</Label>
                     <Input
                       id="country"
                       required
@@ -302,7 +302,7 @@ export function ForEmployers() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="industry">Industry *</Label>
+                    <Label htmlFor="industry" className="mb-2">Industry *</Label>
                     <Input
                       id="industry"
                       required
@@ -310,14 +310,14 @@ export function ForEmployers() {
                       onChange={(e) =>
                         setFormData({ ...formData, industry: e.target.value })
                       }
-                      placeholder="e.g., Healthcare, Construction"
+                      placeholder="Industry"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="positions">Position(s) Required *</Label>
+                    <Label htmlFor="positions" className="mb-2">Position(s) Required *</Label>
                     <Input
                       id="positions"
                       required
@@ -325,11 +325,11 @@ export function ForEmployers() {
                       onChange={(e) =>
                         setFormData({ ...formData, positions: e.target.value })
                       }
-                      placeholder="e.g., Nurses, Engineers"
+                      placeholder="Positions"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="quantity">Number of Workers *</Label>
+                    <Label htmlFor="quantity" className="mb-2">Number of Workers *</Label>
                     <Input
                       id="quantity"
                       required
@@ -338,13 +338,13 @@ export function ForEmployers() {
                       onChange={(e) =>
                         setFormData({ ...formData, quantity: e.target.value })
                       }
-                      placeholder="e.g., 50"
+                      placeholder="quantity"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="requirements">Detailed Requirements</Label>
+                  <Label htmlFor="requirements" className="mb-2">Detailed Requirements</Label>
                   <Textarea
                     id="requirements"
                     rows={5}

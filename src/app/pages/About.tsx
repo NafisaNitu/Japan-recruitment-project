@@ -1,6 +1,14 @@
 import { Target, Eye, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import  Healthcare  from "../images/healthcare.jpg";
+import  Team1  from "../images/team1.jpg";
+import  Team2  from "../images/team2.webp";
+import  Team3  from "../images/team3.webp";
+import  Team4  from "../images/team4.jpg";
+import  Team5  from "../images/team5.webp";
+import  Team6  from "../images/team6.jpg";
+import  Team7  from "../images/team7.webp";
 
 export function About() {
   const values = [
@@ -23,6 +31,43 @@ export function About() {
     {
       title: "Accountability",
       description: "Taking responsibility for our actions and outcomes",
+    },
+  ];
+  const teams = [
+    {
+      name: "Abdul Rahman",
+      position: "Chairman",
+      image: Team1,
+    },
+    {
+      name: "Mijanur Rahman",
+      position: "Managing Director",
+      image: Team2,
+    },
+    {
+      name: "Tomal Mirja",
+      position: "Director",
+      image: Team3,
+    },
+    {
+      name: "Riya Khan",
+      position: "Director HR",
+      image: Team4,
+    },
+    {
+      name: "Abu basar",
+      position: "Visa Expert",
+      image: Team5,
+    },
+    {
+      name: "Sadia Islam",
+      position: "Manager",
+      image: Team6,
+    },
+    {
+      name: "Jibon Islam",
+      position: "Mentor",
+      image: Team7,
     },
   ];
 
@@ -148,6 +193,31 @@ export function About() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl mb-4 text-gray-900">Our Team</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Meet our amazing team that is ready to take your project to the next level!
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {teams.map((team, index) => (
+                <div key={team.name} className="flex flex-col items-center justify-center">
+                  <div className="w-[180px] h-[180px] rounded-full">
+                    <img src={team.image} alt="" className="w-full h-full rounded-full object-cover" />
+                  </div>
+                  <div className="mt-2">
+                      <h2 className="xl:text-xl lg:text-lg text-base font-semibold mt-3 mb-1">{team.name}</h2>
+                      <p className="xl:text-base lg:text-base text-sm text-gray-600 font-medium mb-2">{team.position}</p>
+                  </div>
+                </div>
+            ))} 
           </div>
         </div>
       </section>
