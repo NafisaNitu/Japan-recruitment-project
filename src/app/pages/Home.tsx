@@ -202,7 +202,7 @@ export function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl mb-4 text-gray-900">Industries We Serve</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Providing skilled manpower across diverse sectors
+              Providing skilled manpower across diverse sectors 
             </p>
           </div>
 
